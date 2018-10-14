@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Soci Mood</title>
+
+    <!-- Reset CSS -->
+    <link href="assets/css/reset.css" type="text/css" rel="stylesheet">
+
+    <!-- Style CSS -->
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+</head>
+    <div style="background-color: grey;" class="jumbotron jumbotron-fluid">
+        <h1 class="display-3 text-center">SociMood</h1>
+        <p class="text-center font-weight-light">Search a movie title. See the sentiment of the language used in the plot description.</p>
+
+        <!-- Search Bar -->
+        <div class="row justify-content-center">
+        <div class="input-group input-group-lg col-lg-6">
+            <div class="input-group-prepend">
+                <button type="button" class="btn btn-primary input-group-text" id="submit-button">Search</button>
+            </div>
+            <input id="input" type="text" class="form-control input-lg" placeholder="Movie Title">
+        </div>
+        </div>
+    </div> <!-- End Jumbotron  -->
+
+    <div class="container">
+
+
+
+        <!-- Results card -->
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                    OMDB Plot Description Sentiment
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                    <div class="col-md-6">
+                        <div class="row align-self-center">
+                            <div class="col-md-4">Movie Title: </div>
+                            <div id="movie-title" class="col-md-8"></div>
+                        </div>
+                        <hr>
+                        <div id="rating-display" class="row">
+                            <div id="positive" class="col-5">Positive Sentiment: </div>
+                            <div id="circles-pos" class="circles col-md-7"></div>
+                        </div>
+                        <hr>
+                        <div id="rating-display" class="row">
+                            <div id="neutral" class="col-5">Neutral Sentiment: </div>
+                            <div id="circles-mid" class="circles col-md-7"></div>
+                        </div>
+                        <hr>
+                        <div id="rating-display" class="row">
+                            <div id="negative" class="col-5">Negative Sentiment: </div>
+                            <div id="circles-neg" class="circles col-md-7"></div>
+                        </div>
+                        <hr>
+                    </div>
+
+                    <div id="omdb-info-display" class="col-md-6">
+                        <div class="col-md-12">
+                            <p id="omdb-plot-display" class="font-weight-light"></p>
+                            </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- About Us -->
+        <div class="container-fluid">
+            <h4 class="text-center">About Us</h4>
+            <p class="text-center">Socimood allows you to search for any movie of your choosing and will run the plot of that movie through a text sentiment. Once run through the text sentiment, the results of positive, neutral, or negative will be displayed based on the movies plot.</p>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="circles.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
+</body>
+</html>

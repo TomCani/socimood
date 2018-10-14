@@ -1,0 +1,33 @@
+/* Universal Stylings */
+html {
+      line-height: 1.4;
+}
+
+.container-fluid {
+      margin-top: 2rem;
+}
+
+/* Jumbotron */
+.jumbotron {
+      color: darkslateblue;
+      background-image: url(../images/linear-gradient-yellow-blue-2560x1440-c2-ffdab9-4169e1-a-30-f-14.png)
+}
+
+/* Card */
+.card-header {
+      color: darkslateblue;
+      font-weight: bold;
+      background-image: url(../images/linear-gradient-yellow-blue-2560x1440-c2-ffdab9-4169e1-a-30-f-14.png)
+
+}
+
+/* About Us */
+.container-fluid h4 {
+      text-decoration: underline;
+      color: blue;
+      font-weight: bold;
+}
+
+
+
+
